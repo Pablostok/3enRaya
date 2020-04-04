@@ -16,10 +16,9 @@ matriz = utilities.damematriz(numcol, numfil)
 # -------------------------------------------------------------
 listanegra = []
 
-# utilities.printmatriz(matriz, numcol, numfil)
-
 ok = False
 jugada = 0
+
 while ok == False:
     print("")
     print("   ---Turno del Jugador 1---   ")

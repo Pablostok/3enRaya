@@ -79,10 +79,9 @@ def comprobarganador(matriz):
 
 def comprobaruso(listanegra, posi, posj):
     leido = len(listanegra)
-    ok = False
     o = 0
-
-    for i in range(0, leido):
+    print(leido)
+    for i in range(0, leido - 1):
         if posi == listanegra[i][o] and posj == listanegra[i][o + 1]:
             print("--- Error --- Casilla ocupada ---")
             return False

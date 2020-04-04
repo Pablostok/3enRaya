@@ -74,6 +74,11 @@ while ok == False:
 
         utilities.printmatriz(matriz, numcol, numfil)
 
+        salir = utilities.comprobarganador(matriz)
+
+        if salir == True:
+            ook = True
+
         print("")
         print("   ---Turno del Jugador 1---   ")
         print("")
@@ -102,3 +107,8 @@ while ok == False:
                     matriz[i][j] = "O"
 
         utilities.printmatriz(matriz, numcol, numfil)
+
+        salir = utilities.comprobarganador(matriz)
+
+        if salir == True:
+            ook = True

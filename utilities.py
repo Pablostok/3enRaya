@@ -42,7 +42,7 @@ def comprobarganador(matriz):
         return True
 
     # verticales
-    if matriz[0][0] == "O" and matriz[1][0] == "O" and matriz[2][0] == "O":
+    elif matriz[0][0] == "O" and matriz[1][0] == "O" and matriz[2][0] == "O":
         print("--- Gana ~O~ ---")
         return True
     elif matriz[0][1] == "O" and matriz[1][1] == "O" and matriz[2][1] == "O":
@@ -53,7 +53,7 @@ def comprobarganador(matriz):
         return True
 
     # diagonales
-    if matriz[0][0] == "O" and matriz[1][1] == "O" and matriz[2][2] == "O":
+    elif matriz[0][0] == "O" and matriz[1][1] == "O" and matriz[2][2] == "O":
         print("--- Gana ~O~ ---")
         return True
     elif matriz[2][0] == "O" and matriz[1][1] == "O" and matriz[0][2] == "O":
@@ -63,7 +63,7 @@ def comprobarganador(matriz):
     # Combinaciones X
 
     # horizontales
-    if matriz[0][0] == "X" and matriz[0][1] == "X" and matriz[0][2] == "X":
+    elif matriz[0][0] == "X" and matriz[0][1] == "X" and matriz[0][2] == "X":
         print("--- Gana ~X~ ---")
         return True
     elif matriz[1][0] == "X" and matriz[1][1] == "X" and matriz[1][2] == "X":
@@ -74,7 +74,7 @@ def comprobarganador(matriz):
         return True
 
     # verticales
-    if matriz[0][0] == "X" and matriz[1][0] == "X" and matriz[2][0] == "X":
+    elif matriz[0][0] == "X" and matriz[1][0] == "X" and matriz[2][0] == "X":
         print("--- Gana ~X~ ---")
         return True
     elif matriz[0][1] == "X" and matriz[1][1] == "X" and matriz[2][1] == "X":
@@ -85,21 +85,24 @@ def comprobarganador(matriz):
         return True
 
     # diagonales
-    if matriz[0][0] == "X" and matriz[1][1] == "X" and matriz[2][2] == "X":
+    elif matriz[0][0] == "X" and matriz[1][1] == "X" and matriz[2][2] == "X":
         print("--- Gana ~X~ ---")
         return True
     elif matriz[2][0] == "X" and matriz[1][1] == "X" and matriz[0][2] == "X":
         print("--- Gana ~X~ ---")
         return True
 
+    else:
+        return False
 
 def comprobaruso(listanegra, listaAux):
     leido = len(listanegra)
 
-    print(leido)
     for i in range(0, leido + 1):
         if listaAux in listanegra:
+            print("")
             print("--- Error --- Casilla ocupada ---")
+            print("")
             return False
         else:
             return True

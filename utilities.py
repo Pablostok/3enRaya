@@ -1,6 +1,3 @@
-from random import randrange
-
-
 def damematriz(numcol, numfil):
     matriz = []
 
@@ -17,7 +14,6 @@ def damematriz(numcol, numfil):
         print(aux)
     return matriz
 
-
 def printmatriz(matriz, numcol, numfil):
     for i in range(numfil):
         aux = ""
@@ -25,7 +21,6 @@ def printmatriz(matriz, numcol, numfil):
             aux2 = str(matriz[i][j])
             aux = "    " + aux + aux2 + "  "
         print(aux)
-
 
 def comprobarganador(matriz):
     # Combinaciones O

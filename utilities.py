@@ -1,7 +1,7 @@
 from random import randrange
 
-def damematriz(numcol, numfil):
 
+def damematriz(numcol, numfil):
     matriz = []
 
     for i in range(numcol):
@@ -31,50 +31,66 @@ def comprobarganador(matriz):
     # Combinaciones O
 
     # horizontales
-    if matriz[0][0] and matriz[0][1] and matriz[0][2] == "O":
+    if matriz[0][0] == "O" and matriz[0][1] == "O" and matriz[0][2] == "O":
         print("--- Gana ~O~ ---")
-    if matriz[1][0] and matriz[1][1] and matriz[1][2] == "O":
+        return True
+    elif matriz[1][0] == "O" and matriz[1][1] == "O" and matriz[1][2] == "O":
         print("--- Gana ~O~ ---")
-    if matriz[2][0] and matriz[2][1] and matriz[2][2] == "O":
+        return True
+    elif matriz[2][0] == "O" and matriz[2][1] == "O" and matriz[2][2] == "O":
         print("--- Gana ~O~ ---")
+        return True
 
     # verticales
-    if matriz[0][0] and matriz[1][0] and matriz[2][0] == "O":
+    if matriz[0][0] == "O" and matriz[1][0] == "O" and matriz[2][0] == "O":
         print("--- Gana ~O~ ---")
-    if matriz[0][1] and matriz[1][1] and matriz[2][1] == "O":
+        return True
+    elif matriz[0][1] == "O" and matriz[1][1] == "O" and matriz[2][1] == "O":
         print("--- Gana ~O~ ---")
-    if matriz[0][2] and matriz[1][2] and matriz[2][2] == "O":
+        return True
+    elif matriz[0][2] == "O" and matriz[1][2] == "O" and matriz[2][2] == "O":
         print("--- Gana ~O~ ---")
+        return True
 
     # diagonales
-    if matriz[0][0] and matriz[1][1] and matriz[2][2] == "O":
+    if matriz[0][0] == "O" and matriz[1][1] == "O" and matriz[2][2] == "O":
         print("--- Gana ~O~ ---")
-    if matriz[2][0] and matriz[1][1] and matriz[0][2] == "O":
+        return True
+    elif matriz[2][0] == "O" and matriz[1][1] == "O" and matriz[0][2] == "O":
         print("--- Gana ~O~ ---")
+        return True
 
     # Combinaciones X
 
     # horizontales
-    if matriz[0][0] and matriz[0][1] and matriz[0][2] == "X":
+    if matriz[0][0] == "X" and matriz[0][1] == "X" and matriz[0][2] == "X":
         print("--- Gana ~X~ ---")
-    if matriz[1][0] and matriz[1][1] and matriz[1][2] == "X":
+        return True
+    elif matriz[1][0] == "X" and matriz[1][1] == "X" and matriz[1][2] == "X":
         print("--- Gana ~X~ ---")
-    if matriz[2][0] and matriz[2][1] and matriz[2][2] == "X":
+        return True
+    elif matriz[2][0] == "X" and matriz[2][1] == "X" and matriz[2][2] == "X":
         print("--- Gana ~X~ ---")
+        return True
 
     # verticales
-    if matriz[0][0] and matriz[1][0] and matriz[2][0] == "X":
+    if matriz[0][0] == "X" and matriz[1][0] == "X" and matriz[2][0] == "X":
         print("--- Gana ~X~ ---")
-    if matriz[0][1] and matriz[1][1] and matriz[2][1] == "X":
+        return True
+    elif matriz[0][1] == "X" and matriz[1][1] == "X" and matriz[2][1] == "X":
         print("--- Gana ~X~ ---")
-    if matriz[0][2] and matriz[1][2] and matriz[2][2] == "X":
+        return True
+    elif matriz[0][2] == "X" and matriz[1][2] == "X" and matriz[2][2] == "X":
         print("--- Gana ~X~ ---")
+        return True
 
     # diagonales
-    if matriz[0][0] and matriz[1][1] and matriz[2][2] == "X":
+    if matriz[0][0] == "X" and matriz[1][1] == "X" and matriz[2][2] == "X":
         print("--- Gana ~X~ ---")
-    if matriz[2][0] and matriz[1][1] and matriz[0][2] == "X":
+        return True
+    elif matriz[2][0] == "X" and matriz[1][1] == "X" and matriz[0][2] == "X":
         print("--- Gana ~X~ ---")
+        return True
 
 
 def comprobaruso(listanegra, listaAux, posi, posj):

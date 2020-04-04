@@ -93,10 +93,9 @@ def comprobarganador(matriz):
         return True
 
 
-def comprobaruso(listanegra, listaAux, posi, posj):
+def comprobaruso(listanegra, listaAux):
     leido = len(listanegra)
-    ok = False
-    o = 0
+
     print(leido)
     for i in range(0, leido + 1):
         if listaAux in listanegra:

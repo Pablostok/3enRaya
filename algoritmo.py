@@ -59,7 +59,7 @@ while ok == False:
             posj = int(posjs)
 
             listaAux = [posi, posj]
-            ok = utilities.comprobaruso(listanegra, listaAux, posi, posj)
+            ok = utilities.comprobaruso(listanegra, listaAux)
 
         listaAux = []
         listanegra.append([])
@@ -88,7 +88,7 @@ while ok == False:
             posj = int(posjs)
 
             listaAux = [posi, posj]
-            ok = utilities.comprobaruso(listanegra, listaAux, posi, posj)
+            ok = utilities.comprobaruso(listanegra, listaAux)
 
         listaAux = []
         listanegra.append([])

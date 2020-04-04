@@ -15,6 +15,7 @@ matriz = utilities.damematriz(numcol, numfil)
 
 # -------------------------------------------------------------
 listanegra = []
+listaAux = []
 
 ok = False
 jugada = 0
@@ -54,18 +55,17 @@ while ok == False:
             posis = input("Introduzca la ~i~ de la posición a utilizar: ")
             posjs = input("Introduzca la ~j~ de la posición a utilizar: ")
 
-            print(listanegra)
             posi = int(posis)
             posj = int(posjs)
-            print(listanegra)
 
-            ok = utilities.comprobaruso(listanegra, posi, posj)
+            listaAux = [posi, posj]
+            ok = utilities.comprobaruso(listanegra, listaAux, posi, posj)
 
+        listaAux = []
         listanegra.append([])
         listanegra[jugada].append(posi)
         listanegra[jugada].append(posj)
         jugada = jugada + 1
-        print(listanegra)
 
         for i in range(numfil):
             for j in range(numcol):
@@ -84,18 +84,17 @@ while ok == False:
             posis = input("Introduzca la ~i~ de la posición a utilizar: ")
             posjs = input("Introduzca la ~j~ de la posición a utilizar: ")
 
-            print(listanegra)
             posi = int(posis)
             posj = int(posjs)
-            print(listanegra)
 
-            ok = utilities.comprobaruso(listanegra, posi, posj)
+            listaAux = [posi, posj]
+            ok = utilities.comprobaruso(listanegra, listaAux, posi, posj)
 
+        listaAux = []
         listanegra.append([])
         listanegra[jugada].append(posi)
         listanegra[jugada].append(posj)
         jugada = jugada + 1
-        print(listanegra)
 
         for i in range(numfil):
             for j in range(numcol):

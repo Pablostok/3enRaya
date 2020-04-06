@@ -32,6 +32,7 @@ def juego():
 
         posis = input("Introduzca la ~i~ de la posición a utilizar: ")
         posjs = input("Introduzca la ~j~ de la posición a utilizar: ")
+        print("")
 
         posi = int(posis)
         posj = int(posjs)

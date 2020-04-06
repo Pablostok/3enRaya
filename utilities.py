@@ -12,6 +12,11 @@ def damematriz(numcol, numfil):
             aux2 = str(matriz[i][j])
             aux = "   " + aux + aux2 + "  "
         print(aux)
+    print("")
+    print("         00  01  02")
+    print("         10  11  12")
+    print("         20  21  22")
+    print("")
     return matriz
 
 def printmatriz(matriz, numcol, numfil):

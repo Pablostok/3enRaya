@@ -4,7 +4,7 @@ import algoritmo
 def caratula():
     print("###################################")
     print("#                                 #")
-    print("#          C U A T R O            #")
+    print("#            T R E S              #")
     print("#              E N                #")
     print("#            R A Y A              #")
     print("#                                 #")

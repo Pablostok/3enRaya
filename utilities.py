@@ -19,6 +19,7 @@ def damematriz(numcol, numfil):
     print("")
     return matriz
 
+
 def printmatriz(matriz, numcol, numfil):
     for i in range(numfil):
         aux = ""
@@ -26,6 +27,22 @@ def printmatriz(matriz, numcol, numfil):
             aux2 = str(matriz[i][j])
             aux = "    " + aux + aux2 + "  "
         print(aux)
+
+
+def recogidadatos():
+    print("")
+    print("")
+    j1 = input("Introduzca el nombre del jugador 1: ")
+    j2 = input("Introduzca el nombre del jugador 2: ")
+    print("")
+    print(j1 + ": O")
+    print(j2 + ": X")
+    print("")
+
+    lista = [j1, j2]
+
+    return lista
+
 
 def comprobarganador(matriz):
     # Combinaciones O

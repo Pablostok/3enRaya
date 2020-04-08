@@ -1,18 +1,9 @@
 import utilities
 
 def juego():
-    # -------------------------------------------------------------
-
-    print("")
-    print("")
-    j1 = input("Introduzca el nombre del jugador 1: ")
-    j2 = input("Introduzca el nombre del jugador 2: ")
-    print("")
-    print(j1 + ": O")
-    print(j2 + ": X")
-    print("")
-
-    # -------------------------------------------------------------
+    jugadores = utilities.recogidadatos()
+    j1 = jugadores[0]
+    j2 = jugadores[1]
 
     numcol = 3
     numfil = 3
@@ -27,7 +18,7 @@ def juego():
 
     while ok == False:
         print("")
-        print("   ---Turno del Jugador 1---   ")
+        print("   ---Turno del Jugador 1 (" + j1 + ") ---   ")
         print("")
 
         posis = input("Introduzca la ~i~ de la posición a utilizar: ")
@@ -52,7 +43,7 @@ def juego():
         ook = False
         while ook == False:
             print("")
-            print("   ---Turno del Jugador 2---   ")
+            print("   ---Turno del Jugador 2 (" + j2 + ") ---   ")
             print("")
 
             ok = False
@@ -60,6 +51,7 @@ def juego():
             while ok == False:
                 posis = input("Introduzca la ~i~ de la posición a utilizar: ")
                 posjs = input("Introduzca la ~j~ de la posición a utilizar: ")
+                print("")
 
                 posi = int(posis)
                 posj = int(posjs)
@@ -86,7 +78,7 @@ def juego():
                 ook = True
 
             print("")
-            print("   ---Turno del Jugador 1---   ")
+            print("   ---Turno del Jugador 1 (" + j1 + ") ---   ")
             print("")
 
             ok = False

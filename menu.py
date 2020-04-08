@@ -1,6 +1,5 @@
 import algoritmo
 
-
 # Mejoras:
 # Tablero con numeros
 # Mostrar tablero numerico

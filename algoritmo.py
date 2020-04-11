@@ -47,7 +47,7 @@ def juego():
 
             pos = utilities.sacarpos(casillaautilizar)
 
-            if matriz[pos[0]][pos[1]] == "#":
+            if matriz[pos[0]][pos[1]] != "#":
                 pos[0] = 3
 
         matriz[pos[0]][pos[1]] = ficha

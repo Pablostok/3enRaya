@@ -100,7 +100,7 @@ def comprobarganador(matriz, ficha, jugador):
         gana = True
 
     # verticales
-    elif matriz[0][0] == ficha and matriz[1][0] == ficha and matriz[2][0] == ficha
+    elif matriz[0][0] == ficha and matriz[1][0] == ficha and matriz[2][0] == ficha:
         gana = True
     elif matriz[0][1] == ficha and matriz[1][1] == ficha and matriz[2][1] == ficha:
         gana = True

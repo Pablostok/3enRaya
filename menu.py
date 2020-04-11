@@ -1,9 +1,5 @@
 import algoritmo
 
-# Mejoras:
-# Más brilli - brilli
-# Si el tablero se acaba, no hacer más
-
 def caratula():
     print("###################################")
     print("#                                 #")

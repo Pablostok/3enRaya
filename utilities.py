@@ -123,41 +123,6 @@ def comprobarganador(matriz, ficha, jugador):
 
     return gana
 
-    # # Combinaciones X
-    #
-    # # horizontales
-    # elif matriz[0][0] == "X" and matriz[0][1] == "X" and matriz[0][2] == "X":
-    #     print("--- Gana ~X~ ---")
-    #     return True
-    # elif matriz[1][0] == "X" and matriz[1][1] == "X" and matriz[1][2] == "X":
-    #     print("--- Gana ~X~ ---")
-    #     return True
-    # elif matriz[2][0] == "X" and matriz[2][1] == "X" and matriz[2][2] == "X":
-    #     print("--- Gana ~X~ ---")
-    #     return True
-    #
-    # # verticales
-    # elif matriz[0][0] == "X" and matriz[1][0] == "X" and matriz[2][0] == "X":
-    #     print("--- Gana ~X~ ---")
-    #     return True
-    # elif matriz[0][1] == "X" and matriz[1][1] == "X" and matriz[2][1] == "X":
-    #     print("--- Gana ~X~ ---")
-    #     return True
-    # elif matriz[0][2] == "X" and matriz[1][2] == "X" and matriz[2][2] == "X":
-    #     print("--- Gana ~X~ ---")
-    #     return True
-    #
-    # # diagonales
-    # elif matriz[0][0] == "X" and matriz[1][1] == "X" and matriz[2][2] == "X":
-    #     print("--- Gana ~X~ ---")
-    #     return True
-    # elif matriz[2][0] == "X" and matriz[1][1] == "X" and matriz[0][2] == "X":
-    #     print("--- Gana ~X~ ---")
-    #     return True
-
-    else:
-    return False
-
 def comprobaruso(listanegra, listaAux):
     leido = len(listanegra)
 

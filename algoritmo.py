@@ -17,14 +17,17 @@ def juego():
 
     jugador = ""
     jugada = 1
+    ficha = ""
 
     salir = False
     while salir == False:
 
         if jugada % 2 != 0:
             jugador = j1
+            ficha = "O"
         else:
             jugador = j2
+            ficha = "X"
 
         print("")
         print("   ---Turno de " + jugador + " ---   ")
@@ -37,14 +40,15 @@ def juego():
 
         while pos[0] == 3:
             print("")
-            print("   ---Error: Casilla inexistente---   ")
+            print("   ---Error---   ")
             print("")
-            casillaautilizar = input("Introduzca la posición en el teclado numérico de la casilla a utilizar: ")
+            casillaautilizar = input("Introduzca la posición en el teclado numérico de la casilla libre a utilizar: ")
             print("")
 
             pos = utilities.sacarpos(casillaautilizar)
 
-        ficha = utilities.sacarficha(jugada)
+            if matriz[pos[0]][pos[1]] == "#":
+                pos[0] = 3
 
         matriz[pos[0]][pos[1]] = ficha
 

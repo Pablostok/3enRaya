@@ -39,13 +39,11 @@ def sacarpos(num):
         pos = [3, 3]
         return pos
 
-
 def sacarficha(jugada):
     if jugada % 2 == 0:
         return "X"
     else:
         return "O"
-
 
 def damematriz(numcol, numfil):
     matriz = []
@@ -68,7 +66,6 @@ def damematriz(numcol, numfil):
     print("")
     return matriz
 
-
 def printmatriz(matriz, numcol, numfil):
     for i in range(numfil):
         aux = ""
@@ -76,7 +73,6 @@ def printmatriz(matriz, numcol, numfil):
             aux2 = str(matriz[i][j])
             aux = "    " + aux + aux2 + "  "
         print(aux)
-
 
 def recogidadatos():
     print("")
@@ -91,7 +87,6 @@ def recogidadatos():
     lista = [j1, j2]
 
     return lista
-
 
 def comprobarganador(matriz, ficha, jugador):
     gana = False
@@ -122,15 +117,3 @@ def comprobarganador(matriz, ficha, jugador):
         print("--- Gana ~" + jugador + "~ ---")
 
     return gana
-
-def comprobaruso(listanegra, listaAux):
-    leido = len(listanegra)
-
-    for i in range(0, leido + 1):
-        if listaAux in listanegra:
-            print("")
-            print("--- Error --- Casilla ocupada ---")
-            print("")
-            return False
-        else:
-            return True

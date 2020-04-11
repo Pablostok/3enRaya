@@ -1,3 +1,52 @@
+def sacarpos(num):
+    if num == "7":
+        pos = [0, 0]
+        return pos
+
+    elif num == "8":
+        pos = [0, 1]
+        return pos
+
+    elif num == "9":
+        pos = [0, 2]
+        return pos
+
+    elif num == "4":
+        pos = [1, 0]
+        return pos
+
+    elif num == "5":
+        pos = [1, 1]
+        return pos
+
+    elif num == "6":
+        pos = [1, 2]
+        return pos
+
+    elif num == "1":
+        pos = [2, 0]
+        return pos
+
+    elif num == "2":
+        pos = [2, 1]
+        return pos
+
+    elif num == "3":
+        pos = [2, 2]
+        return pos
+
+    else:
+        pos = [3, 3]
+        return pos
+
+
+def sacarficha(jugada):
+    if jugada % 2 == 0:
+        return "X"
+    else:
+        return "O"
+
+
 def damematriz(numcol, numfil):
     matriz = []
 
@@ -13,9 +62,9 @@ def damematriz(numcol, numfil):
             aux = "   " + aux + aux2 + "  "
         print(aux)
     print("")
-    print("         00  01  02")
-    print("         10  11  12")
-    print("         20  21  22")
+    print("         7  8  9")
+    print("         4  5  6")
+    print("         1  2  3")
     print("")
     return matriz
 

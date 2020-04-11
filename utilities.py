@@ -114,6 +114,7 @@ def comprobarganador(matriz, ficha, jugador):
         gana = True
 
     if gana == True:
-        print("--- Gana ~" + jugador + "~ ---")
+        print("")
+        print("\/\/\/--- Gana ~" + jugador + "~ ---\/\/\/")
 
     return gana

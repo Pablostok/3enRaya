@@ -8,9 +8,6 @@ def juego():
     j1 = jugadores[0]
     j2 = jugadores[1]
 
-    print(j1 + ": O")
-    print(j2 + ": X")
-
     # ----------------------------------------------------
     matriz = utilities.damematriz(numcol, numfil)  # Hacer matriz e imprimirla
     # -----------------------------------------------------
@@ -36,10 +33,9 @@ def juego():
         casillaautilizar = input("Introduzca la posición en el teclado numérico de la casilla a utilizar: ")
         print("")
 
-        pos = utilities.sacarpos(casautilizar)
+        pos = utilities.sacarpos(casillaautilizar)
 
         while pos[0] == 3:
-            print("")
             print("   ---Error---   ")
             print("")
             casillaautilizar = input("Introduzca la posición en el teclado numérico de la casilla libre a utilizar: ")
@@ -47,16 +43,17 @@ def juego():
 
             pos = utilities.sacarpos(casillaautilizar)
 
-            if matriz[pos[0]][pos[1]] != "#":
-                pos[0] = 3
+            if pos[0] != 3:
+                if matriz[pos[0]][pos[1]] != "#":
+                    pos[0] = 3
 
         matriz[pos[0]][pos[1]] = ficha
 
         utilities.printmatriz(matriz, numcol, numfil)
 
-        jugada = jugada + 1
-
         salir = utilities.comprobarganador(matriz, ficha, jugador)
 
         if jugada == 9 and salir == False:
             print("   /\/---Gana gato---\/\   ")
+
+        jugada = jugada + 1

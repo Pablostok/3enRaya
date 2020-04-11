@@ -93,73 +93,70 @@ def recogidadatos():
     return lista
 
 
-def comprobarganador(matriz):
-    # Combinaciones O
+def comprobarganador(matriz, ficha, jugador):
+    gana = False
 
     # horizontales
-    if matriz[0][0] == "O" and matriz[0][1] == "O" and matriz[0][2] == "O":
-        print("--- Gana ~O~ ---")
-        return True
-    elif matriz[1][0] == "O" and matriz[1][1] == "O" and matriz[1][2] == "O":
-        print("--- Gana ~O~ ---")
-        return True
-    elif matriz[2][0] == "O" and matriz[2][1] == "O" and matriz[2][2] == "O":
-        print("--- Gana ~O~ ---")
-        return True
+    if matriz[0][0] == ficha and matriz[0][1] == ficha and matriz[0][2] == ficha:
+        gana = True
+    elif matriz[1][0] == ficha and matriz[1][1] == ficha and matriz[1][2] == ficha:
+        gana = True
+    elif matriz[2][0] == ficha and matriz[2][1] == ficha and matriz[2][2] == ficha:
+        gana = True
 
     # verticales
-    elif matriz[0][0] == "O" and matriz[1][0] == "O" and matriz[2][0] == "O":
-        print("--- Gana ~O~ ---")
-        return True
-    elif matriz[0][1] == "O" and matriz[1][1] == "O" and matriz[2][1] == "O":
-        print("--- Gana ~O~ ---")
-        return True
-    elif matriz[0][2] == "O" and matriz[1][2] == "O" and matriz[2][2] == "O":
-        print("--- Gana ~O~ ---")
-        return True
+    elif matriz[0][0] == ficha and matriz[1][0] == ficha and matriz[2][0] == ficha
+        gana = True
+    elif matriz[0][1] == ficha and matriz[1][1] == ficha and matriz[2][1] == ficha:
+        gana = True
+    elif matriz[0][2] == ficha and matriz[1][2] == ficha and matriz[2][2] == ficha:
+        gana = True
 
     # diagonales
-    elif matriz[0][0] == "O" and matriz[1][1] == "O" and matriz[2][2] == "O":
-        print("--- Gana ~O~ ---")
-        return True
-    elif matriz[2][0] == "O" and matriz[1][1] == "O" and matriz[0][2] == "O":
-        print("--- Gana ~O~ ---")
-        return True
+    elif matriz[0][0] == ficha and matriz[1][1] == ficha and matriz[2][2] == ficha:
+        gana = True
+    elif matriz[2][0] == ficha and matriz[1][1] == ficha and matriz[0][2] == ficha:
+        gana = True
 
-    # Combinaciones X
+    if gana == True:
+        print("--- Gana ~" + jugador + "~ ---")
 
-    # horizontales
-    elif matriz[0][0] == "X" and matriz[0][1] == "X" and matriz[0][2] == "X":
-        print("--- Gana ~X~ ---")
-        return True
-    elif matriz[1][0] == "X" and matriz[1][1] == "X" and matriz[1][2] == "X":
-        print("--- Gana ~X~ ---")
-        return True
-    elif matriz[2][0] == "X" and matriz[2][1] == "X" and matriz[2][2] == "X":
-        print("--- Gana ~X~ ---")
-        return True
+    return gana
 
-    # verticales
-    elif matriz[0][0] == "X" and matriz[1][0] == "X" and matriz[2][0] == "X":
-        print("--- Gana ~X~ ---")
-        return True
-    elif matriz[0][1] == "X" and matriz[1][1] == "X" and matriz[2][1] == "X":
-        print("--- Gana ~X~ ---")
-        return True
-    elif matriz[0][2] == "X" and matriz[1][2] == "X" and matriz[2][2] == "X":
-        print("--- Gana ~X~ ---")
-        return True
-
-    # diagonales
-    elif matriz[0][0] == "X" and matriz[1][1] == "X" and matriz[2][2] == "X":
-        print("--- Gana ~X~ ---")
-        return True
-    elif matriz[2][0] == "X" and matriz[1][1] == "X" and matriz[0][2] == "X":
-        print("--- Gana ~X~ ---")
-        return True
+    # # Combinaciones X
+    #
+    # # horizontales
+    # elif matriz[0][0] == "X" and matriz[0][1] == "X" and matriz[0][2] == "X":
+    #     print("--- Gana ~X~ ---")
+    #     return True
+    # elif matriz[1][0] == "X" and matriz[1][1] == "X" and matriz[1][2] == "X":
+    #     print("--- Gana ~X~ ---")
+    #     return True
+    # elif matriz[2][0] == "X" and matriz[2][1] == "X" and matriz[2][2] == "X":
+    #     print("--- Gana ~X~ ---")
+    #     return True
+    #
+    # # verticales
+    # elif matriz[0][0] == "X" and matriz[1][0] == "X" and matriz[2][0] == "X":
+    #     print("--- Gana ~X~ ---")
+    #     return True
+    # elif matriz[0][1] == "X" and matriz[1][1] == "X" and matriz[2][1] == "X":
+    #     print("--- Gana ~X~ ---")
+    #     return True
+    # elif matriz[0][2] == "X" and matriz[1][2] == "X" and matriz[2][2] == "X":
+    #     print("--- Gana ~X~ ---")
+    #     return True
+    #
+    # # diagonales
+    # elif matriz[0][0] == "X" and matriz[1][1] == "X" and matriz[2][2] == "X":
+    #     print("--- Gana ~X~ ---")
+    #     return True
+    # elif matriz[2][0] == "X" and matriz[1][1] == "X" and matriz[0][2] == "X":
+    #     print("--- Gana ~X~ ---")
+    #     return True
 
     else:
-        return False
+    return False
 
 def comprobaruso(listanegra, listaAux):
     leido = len(listanegra)

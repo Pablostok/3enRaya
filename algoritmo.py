@@ -23,13 +23,13 @@ def juego():
     while ok == False:
 
         if jugada % 2 != 0:
-            print("")
-            print("   ---Turno del Jugador 1 (" + j1 + ") ---   ")
-            print("")
+            jugador = j1
         else:
-            print("")
-            print("   ---Turno del Jugador 2 (" + j2 + ") ---   ")
-            print("")
+            jugador = j2
+
+        print("")
+        print("   ---Turno de " + jugador + " ---   ")
+        print("")
 
         casautilizar = input("Introduzca la posición en el teclado numérico de la casilla a utilizar: ")
         print("")
@@ -53,7 +53,7 @@ def juego():
 
         jugada = jugada + 1
 
-        salir = utilities.comprobarganador(matriz)
+        salir = utilities.comprobarganador(matriz, ficha, jugador)
 
         if salir == True:
             ok = True

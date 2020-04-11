@@ -30,7 +30,7 @@ def juego():
         print("   ---Turno de " + jugador + " ---   ")
         print("")
 
-        casautilizar = input("Introduzca la posición en el teclado numérico de la casilla a utilizar: ")
+        casillaautilizar = input("Introduzca la posición en el teclado numérico de la casilla a utilizar: ")
         print("")
 
         pos = utilities.sacarpos(casautilizar)
@@ -39,10 +39,10 @@ def juego():
             print("")
             print("   ---Error: Casilla inexistente---   ")
             print("")
-            casautilizar = input("Introduzca la posición en el teclado numérico de la casilla a utilizar: ")
+            casillaautilizar = input("Introduzca la posición en el teclado numérico de la casilla a utilizar: ")
             print("")
 
-            pos = utilities.sacarpos(casautilizar)
+            pos = utilities.sacarpos(casillaautilizar)
 
         ficha = utilities.sacarficha(jugada)
 

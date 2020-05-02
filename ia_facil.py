@@ -26,7 +26,7 @@ def juego():
             ficha = "O"
 
             print("")
-            print("   ---Turno del jugador 1---   ")
+            print("   ---Turno de " + jugador + "---   ")
             print("")
 
             casillaautilizar = input("Introduzca la posición en el teclado numérico de la casilla a utilizar: ")
@@ -64,11 +64,11 @@ def juego():
             ok = versigano(tablero, listalibre)
 
             if ok == False:
-                iatonta()  # poner en sitio aleatorio
+                ponerenaleatorio()
+            else:
+                salir = True
 
             utilities.printmatriz(tablero, numcol, numfil)
-
-            salir = utilities.comprobarganador(tablero, ficha, jugador)
 
         if jugada == 9 and salir == False:
             print("   /\/---Gana gato---\/\   ")

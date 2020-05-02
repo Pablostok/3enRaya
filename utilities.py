@@ -118,3 +118,54 @@ def comprobarganador(matriz, ficha, jugador):
         print("\/\/\/--- Gana ~" + jugador + "~ ---\/\/\/")
 
     return gana
+
+
+def comprobarganadoria(matriz):
+    gana = False
+
+    # horizontales
+    if matriz[0][0] == "X" and matriz[0][1] == "X" and matriz[0][2] == "X":
+        gana = True
+    elif matriz[1][0] == "X" and matriz[1][1] == "X" and matriz[1][2] == "X":
+        gana = True
+    elif matriz[2][0] == "X" and matriz[2][1] == "X" and matriz[2][2] == "X":
+        gana = True
+
+    # verticales
+    elif matriz[0][0] == "X" and matriz[1][0] == "X" and matriz[2][0] == "X":
+        gana = True
+    elif matriz[0][1] == "X" and matriz[1][1] == "X" and matriz[2][1] == "X":
+        gana = True
+    elif matriz[0][2] == "X" and matriz[1][2] == "X" and matriz[2][2] == "X":
+        gana = True
+
+    # diagonales
+    elif matriz[0][0] == "X" and matriz[1][1] == "X" and matriz[2][2] == "X":
+        gana = True
+    elif matriz[2][0] == "X" and matriz[1][1] == "X" and matriz[0][2] == "X":
+        gana = True
+
+    return gana
+
+
+def versigano(matriz, listalibre):
+    leido = len(listalibre)
+    k = 0
+    gana = False
+
+    while gana == False and k < leido:
+        pos = sacarpos(listalibre[k])
+        i = pos[0]
+        j = pos[1]
+        matriz[i][j] = "X"
+
+        ok = comprobarganadoria(matriz)
+
+        if ok == True:
+            gana = True
+        else:
+            k = k + 1
+            gana = False
+            matriz[i][j] = "#"
+
+    return gana

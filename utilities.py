@@ -3,43 +3,43 @@ from random import randrange
 
 def sacarpos(num):
     if num == "7":
-        pos = [0, 0]
+        pos = [0, 0, 7]
         return pos
 
     elif num == "8":
-        pos = [0, 1]
+        pos = [0, 1, 8]
         return pos
 
     elif num == "9":
-        pos = [0, 2]
+        pos = [0, 2, 9]
         return pos
 
     elif num == "4":
-        pos = [1, 0]
+        pos = [1, 0, 4]
         return pos
 
     elif num == "5":
-        pos = [1, 1]
+        pos = [1, 1, 5]
         return pos
 
     elif num == "6":
-        pos = [1, 2]
+        pos = [1, 2, 6]
         return pos
 
     elif num == "1":
-        pos = [2, 0]
+        pos = [2, 0, 1]
         return pos
 
     elif num == "2":
-        pos = [2, 1]
+        pos = [2, 1, 2]
         return pos
 
     elif num == "3":
-        pos = [2, 2]
+        pos = [2, 2, 3]
         return pos
 
     else:
-        pos = [3, 3]
+        pos = [3, 3, 0]
         return pos
 
 def sacarficha(jugada):
@@ -155,9 +155,10 @@ def comprobarganadoriatonta(matriz, gana_):
 
     if gana_ == True:
         print("   /\/---Gana gato---\/\   ")
-        gana = True
 
-    else:
+    gana = comprobarganadoria(matriz)
+
+    if gana == True:
         print("  ~()~ Gana la Inteligencia Artificial, que se le va a hacer ~()~  ")
 
 
@@ -188,6 +189,6 @@ def versigano(matriz, listalibre):
 def ponerenaleatorio(listalibre):
     leido = len(listalibre)
 
-    indice = randrange(leido)
+    indice = randrange(leido - 1)
 
-    return sacarpos(indice)
+    return sacarpos(str(indice))

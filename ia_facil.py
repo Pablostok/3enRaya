@@ -61,15 +61,17 @@ def juego():
             print("   ---Turno del jugador 2---   ")
             print("")
 
-            ok = versigano(tablero, listalibre)
+            ok = utilities.versigano(tablero, listalibre)
 
             if ok == False:
-                indice = ponerenaleatorio(listalibre)
-                matriz[indice[0]][indice[1]] = ficha
+                indice = utilities.ponerenaleatorio(listalibre)
+                tablero[indice[0]][indice[1]] = ficha
+                posaborrar = str(indice[2])
+                listalibre.remove(posaborrar)
 
-                gana_ = comprobarganadoria(matriz)
+                gana_ = utilities.comprobarganadoria(tablero)
 
-                comprobarganadoriatonta(matriz, gana_)
+                utilities.comprobarganadoriatonta(tablero, gana_)
 
             else:
                 salir = True

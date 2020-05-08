@@ -1,3 +1,6 @@
+from random import randrange
+
+
 def sacarpos(num):
     if num == "7":
         pos = [0, 0]
@@ -119,7 +122,6 @@ def comprobarganador(matriz, ficha, jugador):
 
     return gana
 
-
 def comprobarganadoria(matriz):
     gana = False
 
@@ -148,6 +150,17 @@ def comprobarganadoria(matriz):
     return gana
 
 
+def comprobarganadoriatonta(matriz, gana_):
+    gana_ = comprobarganadoria(matriz)
+
+    if gana_ == True:
+        print("   /\/---Gana gato---\/\   ")
+        gana = True
+
+    else:
+        print("  ~()~ Gana la Inteligencia Artificial, que se le va a hacer ~()~  ")
+
+
 def versigano(matriz, listalibre):
     leido = len(listalibre)
     k = 0
@@ -170,3 +183,11 @@ def versigano(matriz, listalibre):
             matriz[i][j] = "#"
 
     return gana
+
+
+def ponerenaleatorio(listalibre):
+    leido = len(listalibre)
+
+    indice = randrange(leido)
+
+    return sacarpos(indice)

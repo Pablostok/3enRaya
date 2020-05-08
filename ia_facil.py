@@ -64,7 +64,13 @@ def juego():
             ok = versigano(tablero, listalibre)
 
             if ok == False:
-                ponerenaleatorio()
+                indice = ponerenaleatorio(listalibre)
+                matriz[indice[0]][indice[1]] = ficha
+
+                gana_ = comprobarganadoria(matriz)
+
+                comprobarganadoriatonta(matriz, gana_)
+
             else:
                 salir = True
 

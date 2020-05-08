@@ -1,4 +1,7 @@
 import algoritmo
+import ia_tonta
+import ia_facil
+
 
 def caratula():
     print("###################################")
@@ -18,7 +21,7 @@ def menu():
     print("")
     print("   ---¿Qúe quieres hacer?---   ")
     print("")
-    print("1.- Jugar")
+    print("1.- Elegir modalidad")
     print("2.- Salir")
     print("")
 
@@ -27,7 +30,40 @@ def menu():
     if res == "1":
         print("")
         print("")
-        algoritmo.juego()
+        print("   ---Elija modalidad---   ")
+        print("")
+        print("")
+        print("1.- IA Tonta")
+        print("2.- IA Fácil")
+        print("3.- IA Intermedia")
+        print("4.- IA Difícil")
+        print("5.- Dos jugadores")
+        print("6.- Atrás")
+        print("")
+        print("")
+        resp = input("Introduzca número: ")
+        if resp == "1":
+            ia_tonta.juego()
+        elif resp == "2":
+            ia_facil.juego()
+        elif resp == "3":
+            print("")
+            print("")
+            print("   --- Esta función todavía no está disponible, disculpe las molestias ---   ")
+            print("")
+            print("")
+            menu()
+        elif resp == "4":
+            print("")
+            print("")
+            print("   --- Esta función todavía no está disponible, disculpe las molestias ---   ")
+            print("")
+            print("")
+            menu()
+        elif resp == "5":
+            algoritmo.juego()
+        elif resp == "6":
+            menu()
 
     elif res == "2":
         exit()

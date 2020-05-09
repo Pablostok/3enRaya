@@ -7,6 +7,7 @@ def juego():
 
     print("")
     j1 = input("Introduce tu nombre: ")
+    print("")
 
     listalibre = ["1", "2", "3", "4", "5", "6", "7", "8", "9"]
 
@@ -58,7 +59,7 @@ def juego():
             ficha = "X"
 
             print("")
-            print("   ---Turno del jugador 2---   ")
+            print("   ---Turno de la IA---   ")
             print("")
 
             indice = utilities.ponerenaleatorio(listalibre)
@@ -66,11 +67,14 @@ def juego():
             posaborrar = str(indice[2])
             listalibre.remove(posaborrar)
 
-            gana_ = utilities.comprobarganadoria(tablero)
-
-            utilities.comprobarganadoriatonta(tablero, gana_)
-
             utilities.printmatriz(tablero, numcol, numfil)
+
+            gana = utilities.comprobarganadoriatonta(tablero)
+
+            if gana == True:
+                print("  ...Posdata, háztelo mirar...  ")
+                print("")
+                salir = True
 
         if jugada == 9 and salir == False:
             print("   /\/---Gana gato---\/\   ")

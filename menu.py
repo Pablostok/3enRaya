@@ -19,7 +19,7 @@ def caratula():
 
 def menu():
     print("")
-    print("   ---¿Qúe quieres hacer?---   ")
+    print("   ---¿Qué quieres hacer?---   ")
     print("")
     print("1.- Elegir modalidad")
     print("2.- Salir")

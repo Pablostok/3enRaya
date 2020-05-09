@@ -7,6 +7,7 @@ def juego():
 
     print("")
     j1 = input("Introduce tu nombre: ")
+    print("")
 
     listalibre = ["1", "2", "3", "4", "5", "6", "7", "8", "9"]
 
@@ -69,12 +70,12 @@ def juego():
                 posaborrar = str(indice[2])
                 listalibre.remove(posaborrar)
 
+                utilities.printmatriz(tablero, numcol, numfil)
+
                 utilities.comprobarganadoriatonta(tablero)
 
             else:
                 salir = True
-
-            utilities.printmatriz(tablero, numcol, numfil)
 
         if jugada == 9 and salir == False:
             print("   /\/---Gana gato---\/\   ")

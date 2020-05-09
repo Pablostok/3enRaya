@@ -149,12 +149,13 @@ def comprobarganadoria(matriz):
 
     return gana
 
-
 def comprobarganadoriatonta(matriz):
     gana = comprobarganadoria(matriz)
 
     if gana == True:
+        print("")
         print("  ~()~ Gana la Inteligencia Artificial, que se le va a hacer ~()~  ")
+        return gana
 
 
 def versigano(matriz, listalibre):
@@ -184,6 +185,6 @@ def versigano(matriz, listalibre):
 def ponerenaleatorio(listalibre):
     leido = len(listalibre)
 
-    indice = randrange(leido - 1)
+    indice = randrange(leido)
 
     return sacarpos(listalibre[indice])

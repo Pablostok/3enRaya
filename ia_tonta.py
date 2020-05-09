@@ -77,6 +77,8 @@ def juego():
                 salir = True
 
         if jugada == 9 and salir == False:
+            print("")
             print("   /\/---Gana gato---\/\   ")
+            salir = True
 
         jugada = jugada + 1

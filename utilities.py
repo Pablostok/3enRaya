@@ -172,7 +172,10 @@ def versigano(matriz, listalibre):
         ok = comprobarganadoria(matriz)
 
         if ok == True:
-            print("   /\/---Gana gato---\/\   ")
+            printmatriz(matriz, 3, 3)
+            print("")
+            print("")
+            print("  ~()~ Gana la Inteligencia Artificial, que se le va a hacer ~()~  ")
             gana = True
         else:
             k = k + 1

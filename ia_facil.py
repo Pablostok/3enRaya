@@ -58,7 +58,7 @@ def juego():
             ficha = "X"
 
             print("")
-            print("   ---Turno del jugador 2---   ")
+            print("   ---Turno de la IA---   ")
             print("")
 
             ok = utilities.versigano(tablero, listalibre)
@@ -69,9 +69,7 @@ def juego():
                 posaborrar = str(indice[2])
                 listalibre.remove(posaborrar)
 
-                gana_ = utilities.comprobarganadoria(tablero)
-
-                utilities.comprobarganadoriatonta(tablero, gana_)
+                utilities.comprobarganadoriatonta(tablero)
 
             else:
                 salir = True

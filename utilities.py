@@ -150,12 +150,7 @@ def comprobarganadoria(matriz):
     return gana
 
 
-def comprobarganadoriatonta(matriz, gana_):
-    gana_ = comprobarganadoria(matriz)
-
-    if gana_ == True:
-        print("   /\/---Gana gato---\/\   ")
-
+def comprobarganadoriatonta(matriz):
     gana = comprobarganadoria(matriz)
 
     if gana == True:
@@ -191,4 +186,4 @@ def ponerenaleatorio(listalibre):
 
     indice = randrange(leido - 1)
 
-    return sacarpos(str(indice))
+    return sacarpos(listalibre[indice])

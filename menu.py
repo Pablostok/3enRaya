@@ -34,12 +34,11 @@ def menu():
         print("   ---Elija modalidad---   ")
         print("")
         print("")
-        print("1.- IA Tonta")
-        print("2.- IA Fácil")
-        print("3.- IA Intermedia")
-        print("4.- IA Difícil")
-        print("5.- Dos jugadores")
-        print("6.- Atrás")
+        print("1.- IA Fácil")
+        print("2.- IA Media")
+        print("3.- IA Difícil")
+        print("4.- Dos jugadores")
+        print("5.- Atrás")
         print("")
         print("")
         resp = input("Introduzca número: ")
@@ -49,17 +48,9 @@ def menu():
             ia_facil.juego()
         elif resp == "3":
             ia_media.juego()
-            menu()
         elif resp == "4":
-            print("")
-            print("")
-            print("   --- Esta función todavía no está disponible, disculpe las molestias ---   ")
-            print("")
-            print("")
-            menu()
-        elif resp == "5":
             algoritmo.juego()
-        elif resp == "6":
+        elif resp == "5":
             menu()
 
     elif res == "2":

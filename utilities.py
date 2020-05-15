@@ -149,7 +149,6 @@ def comprobarganadoria(matriz):
 
     return gana
 
-
 def comprobarganadorjugador(matriz):
     gana = False
 
@@ -177,7 +176,6 @@ def comprobarganadorjugador(matriz):
 
     return gana
 
-
 def comprobarganadoriatonta(matriz):
     gana = comprobarganadoria(matriz)
 
@@ -185,7 +183,6 @@ def comprobarganadoriatonta(matriz):
         print("")
         print("  ~()~ Gana la Inteligencia Artificial, que se le va a hacer ~()~  ")
         return gana
-
 
 def versigano(matriz, listalibre):
     leido = len(listalibre)
@@ -227,15 +224,13 @@ def versiganajugador(matriz, listalibre):
 
         ok = comprobarganadorjugador(matriz)
 
-    if ok == True:
-        gana = True
-        return [i, j, pos, gana]
-    else:
-        k = k + 1
-        gana = False
-        return [i, j, pos, gana]
-        matriz[i][j] = "#"
+        if ok == True:
+            gana = True
+        else:
+            k = k + 1
+            matriz[i][j] = "#"
 
+    return [i, j, pos[2], gana]
 
 def ponerenaleatorio(listalibre):
     leido = len(listalibre)

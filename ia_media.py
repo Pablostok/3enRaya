@@ -1,5 +1,5 @@
 import utilities
-
+import menu
 
 def juego():
     numcol = 3
@@ -63,6 +63,11 @@ def juego():
             print("")
 
             ok = utilities.versigano(tablero, listalibre)
+
+            if ok == True:
+                salir = True
+                exit()
+
             ook = utilities.versiganajugador(tablero, listalibre)
 
             if ok == False and ook[3] == False:
@@ -78,6 +83,9 @@ def juego():
                 tablero[ook[0]][ook[1]] = ficha
                 posaborrar = str(ook[2])
                 listalibre.remove(posaborrar)
+
+                utilities.printmatriz(tablero, 3, 3)
+
             else:
                 salir = True
 

@@ -1,6 +1,5 @@
 from random import randrange
 
-
 def sacarpos(num):
     if num == "7":
         pos = [0, 0, 7]
@@ -210,7 +209,6 @@ def versigano(matriz, listalibre):
 
     return gana
 
-
 def versiganajugador(matriz, listalibre):
     leido = len(listalibre)
     k = 0
@@ -231,6 +229,7 @@ def versiganajugador(matriz, listalibre):
             matriz[i][j] = "#"
 
     return [i, j, pos[2], gana]
+
 
 def ponerenaleatorio(listalibre):
     leido = len(listalibre)

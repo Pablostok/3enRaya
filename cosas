@@ -1,23 +1,26 @@
+def comprobarganadoria(matriz):
     gana = False
 
     # horizontales
-    if matriz[0][0] == "X" and matriz[0][1] == "X" and matriz[0][2] == "X":
+    if matriz[0][0] == "O" and matriz[0][1] == "O" and matriz[0][2] == "O":
         gana = True
-    elif matriz[1][0] == "X" and matriz[1][1] == "X" and matriz[1][2] == "X":
+    elif matriz[1][0] == "O" and matriz[1][1] == "O" and matriz[1][2] == "O":
         gana = True
-    elif matriz[2][0] == "X" and matriz[2][1] == "X" and matriz[2][2] == "X":
+    elif matriz[2][0] == "O" and matriz[2][1] == "O" and matriz[2][2] == "O":
         gana = True
 
     # verticales
-    elif matriz[0][0] == "X" and matriz[1][0] == "X" and matriz[2][0] == "X":
+    elif matriz[0][0] == "O" and matriz[1][0] == "O" and matriz[2][0] == "O":
         gana = True
-    elif matriz[0][1] == "X" and matriz[1][1] == "X" and matriz[2][1] == "X":
+    elif matriz[0][1] == "O" and matriz[1][1] == "O" and matriz[2][1] == "O":
         gana = True
-    elif matriz[0][2] == "X" and matriz[1][2] == "X" and matriz[2][2] == "X":
+    elif matriz[0][2] == "O" and matriz[1][2] == "O" and matriz[2][2] == "O":
         gana = True
 
     # diagonales
-    elif matriz[0][0] == "X" and matriz[1][1] == "X" and matriz[2][2] == "X":
+    elif matriz[0][0] == "O" and matriz[1][1] == "O" and matriz[2][2] == "O":
         gana = True
-    elif matriz[2][0] == "X" and matriz[1][1] == "X" and matriz[0][2] == "X":
+    elif matriz[2][0] == "O" and matriz[1][1] == "O" and matriz[0][2] == "O":
         gana = True
+
+    return gana

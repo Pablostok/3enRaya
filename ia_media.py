@@ -63,8 +63,9 @@ def juego():
             print("")
 
             ok = utilities.versigano(tablero, listalibre)
+            ook = utilities.versiganajugador(tablero, listalibre)
 
-            if ok == False:
+            if ok == False and ook[3] == False:
                 indice = utilities.ponerenaleatorio(listalibre)
                 tablero[indice[0]][indice[1]] = ficha
                 posaborrar = str(indice[2])
@@ -73,7 +74,10 @@ def juego():
                 utilities.printmatriz(tablero, numcol, numfil)
 
                 utilities.comprobarganadoriatonta(tablero)
-
+            elif ook[3] == True:
+                tablero[ook[0]][ook[1]] = ficha
+                posaborrar = str(ook[2])
+                listalibre.remove(posaborrar)
             else:
                 salir = True
 

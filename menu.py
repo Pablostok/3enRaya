@@ -1,6 +1,7 @@
 import algoritmo
 import ia_tonta
 import ia_facil
+import ia_media
 
 
 def caratula():
@@ -47,11 +48,7 @@ def menu():
         elif resp == "2":
             ia_facil.juego()
         elif resp == "3":
-            print("")
-            print("")
-            print("   --- Esta función todavía no está disponible, disculpe las molestias ---   ")
-            print("")
-            print("")
+            ia_media.juego()
             menu()
         elif resp == "4":
             print("")

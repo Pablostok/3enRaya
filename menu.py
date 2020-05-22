@@ -46,8 +46,8 @@ def menu():
     elif res == "2":
         exit()
 
-
 def elegirmodalidad():
+
     resp = input("Introduzca número: ")
     if resp == "1":
         ia_tonta.juego()

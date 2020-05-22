@@ -41,20 +41,24 @@ def menu():
         print("5.- Atrás")
         print("")
         print("")
-        resp = input("Introduzca número: ")
-        if resp == "1":
-            ia_tonta.juego()
-        elif resp == "2":
-            ia_facil.juego()
-        elif resp == "3":
-            ia_media.juego()
-        elif resp == "4":
-            algoritmo.juego()
-        elif resp == "5":
-            menu()
+        elegirmodalidad()
 
     elif res == "2":
         exit()
+
+
+def elegirmodalidad():
+    resp = input("Introduzca número: ")
+    if resp == "1":
+        ia_tonta.juego()
+    elif resp == "2":
+        ia_facil.juego()
+    elif resp == "3":
+        ia_media.juego()
+    elif resp == "4":
+        algoritmo.juego()
+    elif resp == "5":
+        menu()
 
 
 caratula()
